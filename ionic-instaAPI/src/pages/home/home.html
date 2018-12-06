@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Welcome to Insta app!</h2>
+  <p>
+    This starter project comes with simple Instagram login flow using ng2-cordova-oauth.
+  </p>
+ 
+  <ion-list>
+    <ion-card *ngFor="let post of apiResponse">
+      <img [src]="post.images.standard_resolution.url"/>
+      <ion-card-content>
+        <p [innerHtml]="post.caption.text"></p>
+      </ion-card-content>
+    </ion-card>  
+  </ion-list>
+  
+</ion-content>
